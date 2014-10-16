@@ -64,3 +64,5 @@ def generate(max_length):
 
 desc = generate(140)
 twitter.update_profile(description=desc)
+
+# EOF
