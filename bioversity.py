@@ -38,29 +38,29 @@ RELATIONSHIP = [ \
 ]
 
 def generate(max_length):
-	terminator = "Your friend"
-	length_tolerance = 10
+    terminator = "Your friend"
+    length_tolerance = 10
 
-        random.shuffle(ADJECTIVE)
-        random.shuffle(DESCRIPTOR)
-        random.shuffle(ACTION)
-        random.shuffle(RELATIONSHIP)
+    random.shuffle(ADJECTIVE)
+    random.shuffle(DESCRIPTOR)
+    random.shuffle(ACTION)
+    random.shuffle(RELATIONSHIP)
 
+    next_relationship = RELATIONSHIP.pop()
+    next_relationship = re.sub('([a-zA-Z])', lambda x: x.groups()[0].upper(), next_relationship, 1)
+
+    bio = "{0} {1} {2}. {3}".format(ADJECTIVE.pop(), DESCRIPTOR.pop(), ACTION.pop(), next_relationship)
+
+    while len(bio) < (max_length - length_tolerance):
+        if len(RELATIONSHIP) == 0:
+            return attempt
         next_relationship = RELATIONSHIP.pop()
-        next_relationship = re.sub('([a-zA-Z])', lambda x: x.groups()[0].upper(), next_relationship, 1)
-
-        bio = "{0} {1} {2}. {3}".format(ADJECTIVE.pop(), DESCRIPTOR.pop(), ACTION.pop(), next_relationship)
-
-	while len(bio) < (max_length - length_tolerance):
-                if len(RELATIONSHIP) == 0:
-                        return attempt
-                next_relationship = RELATIONSHIP.pop()
-		attempt = "{0}, {1}. {2}.".format(bio, next_relationship, terminator)
-		if len(attempt) > max_length:
-			continue
-		elif len(attempt) > max_length - length_tolerance:
-			return attempt
-		bio += ", {0}".format(next_relationship)
+        attempt = "{0}, {1}. {2}.".format(bio, next_relationship, terminator)
+        if len(attempt) > max_length:
+            continue
+        elif len(attempt) > max_length - length_tolerance:
+            return attempt
+        bio += ", {0}".format(next_relationship)
 
 desc = generate(140)
 twitter.update_profile(description=desc)
