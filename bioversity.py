@@ -23,7 +23,7 @@ RELATIONSHIP = [ \
     "sister to @MinaZenunim", \
     "mom to everybody", \
     "kouhai to @Dirk_Gently", \
-    "senpai to @wincom_plus", \
+    "senpai to @winocm_plus", \
     "support to @hoodiejoy", \
     "healer to @SeventhRondo", \
     "brand witch to @SaulKewl", \
