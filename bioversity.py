@@ -40,10 +40,8 @@ def generate(max_length):
     terminator = "Your friend"
     length_tolerance = 10
 
-    random.shuffle(ADJECTIVE)
-    random.shuffle(DESCRIPTOR)
-    random.shuffle(ACTION)
-    random.shuffle(RELATIONSHIP)
+    for list_to_shuffle in [ADJECTIVE, DESCRIPTOR, ACTION, RELATIONSHIP]:
+        random.shuffle(list_to_shuffle)
 
     next_relationship = RELATIONSHIP.pop().capitalize()
 
