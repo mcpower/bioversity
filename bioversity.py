@@ -1,7 +1,6 @@
 #!/usr/bin/python
 #coding: utf-8
 import random
-import re
 from twython import Twython
 
 consumer_key = ""
@@ -46,8 +45,7 @@ def generate(max_length):
     random.shuffle(ACTION)
     random.shuffle(RELATIONSHIP)
 
-    next_relationship = RELATIONSHIP.pop()
-    next_relationship = re.sub('([a-zA-Z])', lambda x: x.groups()[0].upper(), next_relationship, 1)
+    next_relationship = RELATIONSHIP.pop().capitalize()
 
     bio = "{0} {1} {2}. {3}".format(ADJECTIVE.pop(), DESCRIPTOR.pop(), ACTION.pop(), next_relationship)
 
