@@ -13,27 +13,27 @@ twitter = Twython(consumer_key, consumer_key_secret, access_token, access_token_
 ADJECTIVE = ["Trans", "Shy", "Asexual", "Neuroatypical", "Plural", "Cute", "19-year-old", "Cuddly", "Music-loving", "Funny", "Warm-hearted", "Multiple", "Silly", "Goofy", "Awkward", "Autistic", "Radical"]
 DESCRIPTOR = ["girl", "student", "catgirl", "wannabe", "woman", "SJW", "activist", "punk", "magical girl", "punk rock princess", "witch", "protagonist", "clutz"]
 ACTION = ["studying software engineering", "doing the best I can", "trying to change the world", "fighting for my friends", "befriending nice people", "lurking on a forum somewhere", "relearning empathy and kindness", "eating Chinese food", "probably baking desserts", "singing too loudly in the shower", "stumbling over code", "stubbing her toe", "watching anime", "eating Italian food", "eating sweets", "curled up, asleep"]
-RELATIONSHIP = [ \
-    "wife to @enbykid", \
-    "headmate to @kinuko_chan & @SomethingCole", \
-    "DPS to @tteugeo", \
-    "adventuring partner to @m1sp", \
-    "programming fangirl to @FioraAeterna", \
-    "sister to @MinaZenunim", \
-    "mom to everybody", \
-    "kouhai to @Dirk_Gently", \
-    "senpai to @winocm_plus", \
-    "support to @hoodiejoy", \
-    "healer to @SeventhRondo", \
-    "brand witch to @SaulKewl", \
-    "future roommate to @plus_chan", \
-    "bestie to @RijoPorter", \
-    "terror to #GamerGate", \
-    "antagonist to bigots", \
-    "mistress of memes", \
-    "scourge to America", \
-    "winner of Mario Kart", \
-    "mayor of Animal Crossing" \
+RELATIONSHIP = [
+    "wife to @enbykid",
+    "headmate to @kinuko_chan & @SomethingCole",
+    "DPS to @tteugeo",
+    "adventuring partner to @m1sp",
+    "programming fangirl to @FioraAeterna",
+    "sister to @MinaZenunim",
+    "mom to everybody",
+    "kouhai to @Dirk_Gently",
+    "senpai to @winocm_plus",
+    "support to @hoodiejoy",
+    "healer to @SeventhRondo",
+    "brand witch to @SaulKewl",
+    "future roommate to @plus_chan",
+    "bestie to @RijoPorter",
+    "terror to #GamerGate",
+    "antagonist to bigots",
+    "mistress of memes",
+    "scourge to America",
+    "winner of Mario Kart",
+    "mayor of Animal Crossing"
 ]
 
 def generate(max_length):
